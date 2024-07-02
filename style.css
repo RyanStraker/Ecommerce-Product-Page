@@ -1,0 +1,12 @@
+body {
+    font-family: "Kumbh Sans";
+    font-weight: 400;
+}
+
+li {
+    display: inline-block;
+}
+
+#unique-grey-background {
+    background-color: grey;
+}

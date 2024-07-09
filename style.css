@@ -28,3 +28,13 @@ li {
 #your-cart-is-empty {
     background-color: blue;
 }
+
+#basket-menu-container {
+    height: 130px;
+    background-color: black;
+    width: 20%;
+    position: fixed;
+    left: 70%;
+    border-radius: 25px;
+    z-index: 1;
+}

@@ -10,3 +10,21 @@ li {
 #unique-grey-background {
     background-color: grey;
 }
+
+#lightbox_popup {
+    margin-top: -1000px;
+}
+
+@media all and (max-width: 768px) {
+    #main-shoe-container {
+        height: 400px;
+        background-image: url(images/image-product-1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0px -200px;
+    }
+}
+
+#your-cart-is-empty {
+    background-color: blue;
+}

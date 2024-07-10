@@ -1,28 +1,30 @@
-body {
+.container-fluid {
+    overflow: hidden;
+}
+
+body, a {
     font-family: "Kumbh Sans";
     font-weight: 400;
+    color: hsl(220, 13%, 13%);
 }
 
-li {
-    display: inline-block;
+/* styling relating to navbar */
+
+#visible-nav {
+    border-bottom: 1px solid rgb(233, 233, 233);
 }
 
-#unique-grey-background {
-    background-color: grey;
+#nav-last-two img {
+    float: right;
+    height: 50px;
+    vertical-align: middle;
 }
 
-#lightbox_popup {
-    margin-top: -1000px;
-}
-
-@media all and (max-width: 768px) {
-    #main-shoe-container {
-        height: 400px;
-        background-image: url(images/image-product-1.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 0px -200px;
-    }
+#basket-icon-clickable {
+    height: 20px !important;
+    vertical-align: middle;
+    margin-top: 10%;
+    margin-right: 30%;
 }
 
 #your-cart-is-empty {
@@ -37,4 +39,94 @@ li {
     left: 70%;
     border-radius: 25px;
     z-index: 1;
+}
+
+div.collapse > ul > li {
+    margin-right: 20px;
+    color: hsl(223, 64%, 98%) !important;
+}
+
+/* styling relating to first half of main content - image pictures on medium screens and above */
+
+#main-shoe-container > img, .col-3 > a > img {
+    border-radius: 20px;
+}
+
+/* styling relating to second half of main content */
+
+#product-description-area {
+    padding-top: 10%;
+}
+
+#product-description-area > .row > .col-11 > p:first-child {
+    text-transform: uppercase;
+}
+
+h1, #price {
+       font-weight: 700;
+}
+
+#price {
+    font-size: 25px;
+}
+
+#price-was {
+    text-decoration: line-through;
+    font-weight: 700;
+}
+
+#add-to-cart-button {
+    width: 100%;
+    background-color: hsl(26, 100%, 55%);
+}
+
+#quantity-toggler {
+    width: 100%;
+    background-color: rgb(247, 248, 253);
+    vertical-align: middle;
+}
+
+#add-to-cart-button, #quantity-toggler {
+    border-radius: 15px;
+    height: 3.5em;
+    border: none;
+    font-weight: 700;
+}
+#inline-container {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 15%;
+}
+
+
+/* placeholder styling */
+
+
+li {
+    display: inline-block;
+}
+
+#unique-grey-background {
+    background-color: rgb(31, 34, 41);
+    text-align: center;
+    border-radius: 15px;
+}
+
+#unique-grey-background > p {
+    padding-top: 0.7em;
+    color: white;
+}
+
+#lightbox_popup {
+    margin-top: -1000px;
+}
+
+@media all and (max-width: 768px) {
+    #main-shoe-container {
+        height: 400px;
+        background-image: url(images/image-product-1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0px -200px;
+    }
 }

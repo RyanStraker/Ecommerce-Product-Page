@@ -16,9 +16,9 @@
 
             <!--Nav bar row -->
 
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-9">
-                    <nav class="row navbar navbar-expand-md">
+            <div class="row justify-content-center mb-5">
+                <div class="col-12 col-md-9 px-0" id="visible-nav">
+                    <nav class="row navbar navbar-expand-md p-0 my-4">
                         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#mobileCollapsedNav">
                             <img src="images/icon-menu.svg" class="img-fluid">
                         </button>
@@ -26,7 +26,7 @@
                             <img src="images/logo.svg" class="img-fluid">
                         </div>
                         <div class="col-8 collapse navbar-collapse navbar-nav" id="mobileCollapsedNav">
-                            <ul>
+                            <ul class="mb-0">
                                 <li><a href="#">Collections</a></li>
                                 <li><a href="#">Men</a></li>
                                 <li><a href="#">Women</a></li>
@@ -36,9 +36,9 @@
                         </div>
 
                         <!-- For the basket, it will have to be done as a box w/position: fixed that is revealed by JavaScript on click event-->
-                        <div class="col-2">
+                        <div class="col-2" id="nav-last-two">
+                            <img src="images/image-avatar.png" class="img-fluid" id="avatar-image">
                             <img src="images/icon-cart.svg" class="img-fluid" id="basket-icon-clickable">
-                            <img src="images/image-avatar.png" class="img-fluid">
                         </div>
                     </nav>
                     <!-- Basket menu -->
@@ -56,6 +56,9 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-md-9">
                     <div class="row">
+
+                        <!--start of product images - one half of container for visible screens-->
+
                         <div class="col-12 col-md-6">
                             <div class="row justify-content-center">
                                 <div class="col-12" id="main-shoe-container">
@@ -68,8 +71,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row justify-content-center d-none d-md-block">
-                                <div class="col-12">
+                            <div class="row justify-content-center d-none d-md-block mt-4">
+                                <div class="col-12" id="images-underneath-main">
                                     <div class="row">
                                         <div class="col-3">
                                             <a href="#"><img src="images/image-product-1-thumbnail.jpg" class="img-fluid""></a>
@@ -91,17 +94,17 @@
         
                         <!-- product description and add to cart features-->
         
-                        <div class="col-9 col-md-6">
+                        <div class="col-9 col-md-6" id="product-description-area">
                             <div class="row justify-content-center align-items-center">
                                 <div class="col-11">
                                     <p>Sneaker Company</p>
                                     <h1>Fall Limited Edition Sneakers</h1>
                                     <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
                                     <div class="row">
-                                        <div class="col-4 col-md-2">
-                                            <p>$125.00</p>
+                                        <div class="col-4 col-md">
+                                            <p id="price">$125.00</p>
                                         </div>
-                                        <div class="col-8">
+                                        <div class="col-9">
                                             <div class="row">
                                                 <div class="col-2" id="unique-grey-background">
                                                     <p>50%</p>
@@ -112,17 +115,19 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="d-none d-md-block">$250</p>
+                                    <p class="d-none d-md-block" id="price-was">$250</p>
                                     <div class="row">
                                         <div class="col-12">
-                                            <div class="row justify-content-between">
-                                                <div class="col-12 col-md-3">
-                                                    <img src="images/icon-minus.svg">
-                                                    <span>0</span>
-                                                    <img src="images/icon-plus.svg">
+                                            <div class="row justify-content-start">
+                                                <div class="col-12 col-md-3" id="quantity-toggler">
+                                                    <div id="inline-container">
+                                                        <img src="images/icon-minus.svg" style="padding-right: 15px;" id="lessPlease">
+                                                        <span style="padding-right: 15px;" id="amount-buying">0</span>
+                                                        <img src="images/icon-plus.svg" id="morePlease">   
+                                                    </div>    
                                                 </div>
                                                 <div class="col-12 col-md-7">
-                                                    <button><img src="images/icon-cart.svg"> Add to cart</button>
+                                                    <button id="add-to-cart-button"><img src="images/icon-cart.svg"> Add to cart</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -153,7 +158,7 @@
                             </div>
                             <div class="row justify-content-center">
                                 <div class="col-12">
-                                    <div class="row justify-content-center">
+                                    <div class="row justify-content-center" id="main-underneath-container">
                                         <div class="col-3">
                                             <a href="#"><img src="images/image-product-1-thumbnail.jpg" class="img-fluid""></a>
                                         </div>

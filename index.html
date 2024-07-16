@@ -12,6 +12,48 @@
         <script src="script.js"></script>
     </head>
     <body>
+
+
+        <!-- First things first, the lightbox-->
+
+        <div class="modal" id="Lightbox" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="close" id="modal-close">
+                        <img src="images/icon-close.svg" class="img-fluid" id="modal-close-image">
+                    </button>                        
+                    <div class="modal-body">
+                        <div class="container-fluid" id="modal-container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="images/image-product-1.jpg" class="img-fluid" id="lightbox-main-image">
+                                </div>
+                            </div>
+                            <div class="row justify-content-center mt-3">
+                                <div class="col-10">
+                                    <div class="row" id="images-underneath-row">
+                                        <div class="col-3">
+                                            <a><img src="images/image-product-1-thumbnail.jpg" class="img-fluid"></a>
+                                        </div>
+                                        <div class="col-3">
+                                            <a><img src="images/image-product-2-thumbnail.jpg" class="img-fluid"></a>
+                                        </div>
+                                        <div class="col-3">
+                                            <a><img src="images/image-product-3-thumbnail.jpg" class="img-fluid"></a>
+                                        </div>
+                                        <div class="col-3">
+                                            <a><img src="images/image-product-4-thumbnail.jpg" class="img-fluid"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="container=fluid">
 
             <!--Nav bar row -->
@@ -75,16 +117,16 @@
                                 <div class="col-12" id="images-underneath-main">
                                     <div class="row">
                                         <div class="col-3">
-                                            <a href="#"><img src="images/image-product-1-thumbnail.jpg" class="img-fluid""></a>
+                                            <a href="#"><img src="images/image-product-1-thumbnail.jpg" class="img-fluid non-lightbox-images-underneath" data-toggle="modal" data-target="#Lightbox"></a>
                                         </div>
                                         <div class="col-3">
-                                            <a href="#"><img src="images/image-product-2-thumbnail.jpg" class="img-fluid"></a>
+                                            <a href="#"><img src="images/image-product-2-thumbnail.jpg" class="img-fluid non-lightbox-images-underneath" data-toggle="modal" data-target="#Lightbox"></a>
                                         </div>
                                         <div class="col-3">
-                                            <a href="#"><img src="images/image-product-3-thumbnail.jpg" class="img-fluid"></a>
+                                            <a href="#"><img src="images/image-product-3-thumbnail.jpg" class="img-fluid non-lightbox-images-underneath" data-toggle="modal" data-target="#Lightbox"></a>
                                         </div>
                                         <div class="col-3">
-                                            <a href="#"><img src="images/image-product-4-thumbnail.jpg" class="img-fluid"></a>
+                                            <a href="#"><img src="images/image-product-4-thumbnail.jpg" class="img-fluid non-lightbox-images-underneath" data-toggle="modal" data-target="#Lightbox"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -134,46 +176,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--The lightbox pop up row.-->
-            <!-- Idea is to code it here, set to display: none, then onClick set display block with negative margin-top-->
-
-            <div class="row justify-content-center" id="lightbox_popup" style="display: none ">
-                <div class="col-5">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="row justify-content-end">
-                                <div class="col-1">
-                                    <img src="images/icon-close.svg">
-                                </div>
-                            </div>
-                            <div class="row justify-content-center">
-                                <div class="col-12">
-                                    <img src="images/image-product-1.jpg">
-                                </div>
-                            </div>
-                            <div class="row justify-content-center">
-                                <div class="col-12">
-                                    <div class="row justify-content-center" id="main-underneath-container">
-                                        <div class="col-3">
-                                            <a href="#"><img src="images/image-product-1-thumbnail.jpg" class="img-fluid""></a>
-                                        </div>
-                                        <div class="col-3">
-                                            <a href="#"><img src="images/image-product-2-thumbnail.jpg" class="img-fluid"></a>
-                                        </div>
-                                        <div class="col-3">
-                                            <a href="#"><img src="images/image-product-3-thumbnail.jpg" class="img-fluid"></a>
-                                        </div>
-                                        <div class="col-3">
-                                            <a href="#"><img src="images/image-product-4-thumbnail.jpg" class="img-fluid"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> 
                         </div>
                     </div>
                 </div>

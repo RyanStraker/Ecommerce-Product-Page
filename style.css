@@ -8,6 +8,34 @@ body, a {
     color: hsl(220, 13%, 13%);
 }
 
+
+/* styling relating to modal */
+
+#modal-container, .modal-body {
+    padding: 0;
+}
+
+.modal-content {
+    background-color: transparent;
+    border: none;
+}
+
+#modal-close-image {
+    float: right;
+    display: inline;
+}
+
+#lightbox-main-image {
+    border-radius: 20px;
+}
+
+#lightbox-navigation-buttons {
+    background-color: white;
+    border-radius: 360px;
+    display: inline-block;
+    padding: 10px;
+}
+
 /* styling relating to navbar */
 
 #visible-nav {

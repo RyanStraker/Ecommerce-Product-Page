@@ -23,6 +23,11 @@ body, a {
 #modal-close-image {
     float: right;
     display: inline;
+    color: white;
+}
+
+#modal-close {
+    margin-bottom: 10px;
 }
 
 #lightbox-main-image {

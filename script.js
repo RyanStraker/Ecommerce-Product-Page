@@ -81,8 +81,6 @@ window.addEventListener('DOMContentLoaded', function() {
 
     });
 
-    
-
     //Code to get lightbox image to change on clicks - WITHIN lightbox//
 
     var lightboxImagesUnderneath = document.getElementsByClassName('lightbox-thumbnails');
@@ -103,4 +101,11 @@ window.addEventListener('DOMContentLoaded', function() {
     
     //code to set lightbox load image as the one which the user has clicked//
 
+    mainUnderneaths.addEventListener('click', function(event) {
+        for (var i = 0; i < mainUnderneath.length; i++) {
+            if (event.target == mainUnderneath[i]) {
+                lightboxImage.setAttribute('src', imageLocations[i]);
+            }
+        }
+    })
 })

@@ -54,20 +54,20 @@
         </div>
 
 
-        <div class="container=fluid">
+        <div class="container-fluid">
 
             <!--Nav bar row -->
 
             <div class="row justify-content-center mb-5">
-                <div class="col-12 col-md-9 px-0" id="visible-nav">
+                <div class="col-12 col-md-9 px-m-0" id="visible-nav">
                     <nav class="row navbar navbar-expand-md p-0 my-4">
                         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#mobileCollapsedNav">
-                            <img src="images/icon-menu.svg" class="img-fluid">
-                        </button>
-                        <div class="col-2">     
-                            <img src="images/logo.svg" class="img-fluid">
+                            <img src="images/icon-menu.svg">
+                        </button>  
+                        <div class="col">     
+                            <img src="images/logo.svg" id="logo-image">
                         </div>
-                        <div class="col-8 collapse navbar-collapse navbar-nav" id="mobileCollapsedNav">
+                        <div class="col collapse navbar-collapse navbar-nav text-left" id="mobileCollapsedNav">
                             <ul class="mb-0">
                                 <li><a href="#">Collections</a></li>
                                 <li><a href="#">Men</a></li>
@@ -78,10 +78,12 @@
                         </div>
 
                         <!-- For the basket, it will have to be done as a box w/position: fixed that is revealed by JavaScript on click event-->
-                        <div class="col-2" id="nav-last-two">
-                            <img src="images/image-avatar.png" class="img-fluid" id="avatar-image">
-                            <img src="images/icon-cart.svg" class="img-fluid" id="basket-icon-clickable">
+                        <div class="col-1" class="nav-last-two" style="max-width: 100%">
+                            <img src="images/icon-cart.svg" id="basket-icon-clickable">
                         </div>
+                        <div class="col-1" class="nav-last-two" style="max-width: 100%">
+                            <img src="images/image-avatar.png" id="avatar-image">
+                        </div>   
                     </nav>
                     <!-- Basket menu -->
                     

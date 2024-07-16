@@ -1,6 +1,8 @@
 .container-fluid {
+    max-width: 100%;
     overflow: hidden;
 }
+
 
 body, a {
     font-family: "Kumbh Sans";
@@ -34,23 +36,17 @@ body, a {
     border-radius: 20px;
 }
 
-#lightbox-navigation-buttons {
-    background-color: white;
-    border-radius: 360px;
-    display: inline-block;
-    padding: 10px;
-}
-
 /* styling relating to navbar */
 
 #visible-nav {
     border-bottom: 1px solid rgb(233, 233, 233);
 }
 
-#nav-last-two img {
-    float: right;
+.nav-last-two img {
+}
+
+#avatar-image {
     height: 50px;
-    vertical-align: middle;
 }
 
 #basket-icon-clickable {
@@ -77,6 +73,12 @@ body, a {
 div.collapse > ul > li {
     margin-right: 20px;
     color: hsl(223, 64%, 98%) !important;
+}
+
+@media all and (max-width: 356px) {
+    #logo-image {
+        width: 100%;
+    }
 }
 
 /* styling relating to first half of main content - image pictures on medium screens and above */

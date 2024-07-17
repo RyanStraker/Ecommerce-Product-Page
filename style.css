@@ -1,3 +1,12 @@
+/* table of contents:
+
+    1. document-wide styles. most wide reaching
+    2. modal styles
+    3. navbar styles
+    4. mobile design styles
+
+                                                    */
+
 .container-fluid {
     max-width: 100%;
     overflow: hidden;
@@ -42,9 +51,6 @@ body, a {
     border-bottom: 1px solid rgb(233, 233, 233);
 }
 
-.nav-last-two img {
-}
-
 #avatar-image {
     height: 50px;
 }
@@ -56,18 +62,32 @@ body, a {
     margin-right: 30%;
 }
 
-#your-cart-is-empty {
-    background-color: blue;
+#basket-menu-container {
+    height: 200px;
 }
 
-#basket-menu-container {
-    height: 130px;
-    background-color: black;
-    width: 20%;
-    position: fixed;
-    left: 70%;
+#basket-menu-panel {
+    height: 90%;
+    background-color: white;
+    width: 90%;
     border-radius: 25px;
-    z-index: 1;
+    
+}
+
+h2 {
+    border-bottom: 1px solid rgb(233, 233, 233);
+    font-size: 14px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+#mobile-your-cart-is-empty {
+    margin-bottom: 0;
+    font-weight: 700;
+    color: rgb(99, 100, 105);
 }
 
 div.collapse > ul > li {
@@ -80,6 +100,33 @@ div.collapse > ul > li {
         width: 100%;
     }
 }
+
+
+/* mobile design styles */
+
+
+@media all and (max-width: 769px) {
+    #main-shoe-container {
+        height: 200px;
+        background-image: url(images/image-product-1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0px -50px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    #sneaker-company-p {
+        font-size: 12px;
+    }
+
+    h1 {
+       font-size: 30px;
+    }
+}
+
+
+
 
 /* styling relating to first half of main content - image pictures on medium screens and above */
 
@@ -105,7 +152,7 @@ h1, #price {
     font-size: 25px;
 }
 
-#price-was {
+.price-was {
     text-decoration: line-through;
     font-weight: 700;
 }
@@ -126,11 +173,23 @@ h1, #price {
     height: 3.5em;
     border: none;
     font-weight: 700;
+    width: 100%;
 }
 #inline-container {
     margin: 0 auto;
     text-align: center;
     padding-top: 15%;
+    max-height: 100%;
+}
+
+#centering {
+    margin-top: 9%;
+}
+
+/* styling for product description section */
+
+#price {
+    max-width: 100%;
 }
 
 
@@ -154,14 +213,4 @@ li {
 
 #lightbox_popup {
     margin-top: -1000px;
-}
-
-@media all and (max-width: 768px) {
-    #main-shoe-container {
-        height: 400px;
-        background-image: url(images/image-product-1.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 0px -200px;
-    }
 }

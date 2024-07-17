@@ -29,7 +29,12 @@ window.addEventListener('DOMContentLoaded', function() {
     var cartIcon = document.getElementById('basket-icon-clickable');
 
     cartIcon.addEventListener('click', function () {
-        basketMenu.setAttribute('style', 'display: block');
+        if (basketMenu.style.display == 'none') {
+            basketMenu.setAttribute('style', 'display: flex');
+        } else if (basketMenu.style.display == 'flex') {
+            basketMenu.setAttribute('style', 'display: none');
+        }
+        
     });
 
     //Code to get opacity to change on click on images underneath main, and to introduce an orange solid border of 2px//

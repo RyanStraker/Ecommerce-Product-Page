@@ -125,6 +125,34 @@ div.collapse > ul > li {
     }
 }
 
+#checkout-from-cart {
+    width: 100%;
+    border-radius: 15px;
+    height: 3em;
+    border: none;
+    font-weight: 700;
+    background-color: hsl(26, 100%, 55%);
+}
+
+@media all and (min-width: 523px) {
+    #checkout-from-cart {
+        background-color: hsl(26, 100%, 55%);
+        width: 75%;
+        float: right;
+        margin-top: -50px;
+    }
+}
+
+@media all and (min-width: 647px) {
+    #checkout-from-cart {
+        background-color: hsl(26, 100%, 55%);
+        width: 75%;
+        float: right;
+        margin-top: -70px;
+    }
+}
+
+
 
 
 

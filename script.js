@@ -113,4 +113,29 @@ window.addEventListener('DOMContentLoaded', function() {
             }
         }
     })
+
+    //code to programatically update the calculations of final price in the mobile-display basket panel//
+
+    var addToCartButton = document.getElementById('add-to-cart-button');
+    var amountPurchasing = document.getElementById('quantity-buying');
+    var finalPrice = document.getElementById('final-price');
+    var mobileEmpty = document.getElementById('mobile-your-cart-is-empty');
+    var mobileFull = document.getElementById('mobile-stuff-in-cart');
+
+    addToCartButton.addEventListener('click', function() {
+        amountPurchasing.innerHTML = quantityBuying.innerHTML;
+        finalPrice.innerHTML = amountPurchasing.innerHTML * 125;
+
+
+    })
+
+    addToCartButton.addEventListener('click', function() {
+        if (amountPurchasing.innerHTML == 0) {
+            mobileEmpty.setAttribute('style', 'display: flex');
+            mobileFull.setAttribute('style', 'display: none');
+        } else if (amountPurchasing.innerHTML) {
+            mobileEmpty.setAttribute('style', 'display: none');
+            mobileFull.setAttribute('style', 'display: block');
+        }
+    })
 })

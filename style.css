@@ -152,6 +152,16 @@ div.collapse > ul > li {
     }
 }
 
+@media all and (max-width: 767px) {
+    #mobile-menu {
+        background-color: transparent;
+        height: 100vh;
+        z-index: 1;
+        width: 50%;
+        position: absolute;
+    }
+}
+
 
 
 

@@ -36,7 +36,15 @@ window.addEventListener('DOMContentLoaded', function() {
         }
         
     });
+    //code to reveal the mobile menu on click of button //
 
+    var mobileButton = document.getElementById('navbar-toggler');
+    var mobileMenu = document.getElementById('mobile-menu'); 
+
+    mobileButton.addEventListener('click', function () {
+        mobileMenu.setAttribute('style', 'display: block');
+    })
+    
     //Code to get opacity to change on click on images underneath main, and to introduce an orange solid border of 2px//
 
     var mainUnderneath = document.getElementsByClassName('non-lightbox-images-underneath');
@@ -139,3 +147,4 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     })
 })
+

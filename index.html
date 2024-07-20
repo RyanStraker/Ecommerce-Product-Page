@@ -60,12 +60,19 @@
 
             <div class="row justify-content-center mb-md-5">
                 <div class="col-12 col-md-9 px-m-0" id="visible-nav">
-                    <nav class="row navbar navbar-expand-md p-0 my-4">
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#mobileCollapsedNav">
-                            <img src="images/icon-menu.svg">
+                    <nav class="row navbar navbar-expand-md p-0 my-4" style="position: relative">
+                        <button type="button" class="navbar-toggler" data-target="#mobileCollapsedNav"> 
+                            <img src="images/icon-menu.svg" id="navbar-toggler">
                         </button>  
                         <div class="col">     
                             <img src="images/logo.svg" id="logo-image">
+                        </div>
+                        <!-- mobile menu -->
+                        <div id="mobile-menu" style="display: none">
+                            <div>
+                                <img src="images/icon-close.svg">
+                                <h1>hello</h1>
+                            </div>
                         </div>
                         <div class="col collapse navbar-collapse navbar-nav text-left" id="mobileCollapsedNav">
                             <ul class="mb-0">
@@ -103,7 +110,7 @@
 
                                     <!-- Basket menu. Ur cart is empty message is set by default to display block via inline CSS. JS updates to display none when items added to cart -->
 
-                                    <div class="row align-items-center justify-content-center" id="basket-menu-container" style="display: flex">
+                                    <div class="row align-items-center justify-content-center" id="basket-menu-container" style="display: none">
                                         <div class="col-11 px-0" id="basket-menu-panel">
                                             <h2>Cart</h2>
                                             <div class="row justify-content-center align-items-center" style="height: 130px">

@@ -12,11 +12,44 @@
     overflow: hidden;
 }
 
+nav {
+    position: relative;
+}
+
+.nav-last-two {
+    position: relative;
+}
+#cart-amount {
+    border-radius: 20px;
+    background-color: hsl(26, 100%, 55%);
+    float: right;
+    position: absolute;
+    left: 35px;
+    bottom: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 20px;
+    height: 20px;
+}
+
+#cart-amount span {
+    vertical-align: top;
+    position: relative;
+    bottom: 0px;
+    color: white;
+    font-size: 13px;
+}
 
 body, a {
     font-family: "Kumbh Sans";
     font-weight: 400;
     color: hsl(220, 13%, 13%);
+}
+
+#basket-menu-panel-mediumAndAbove {
+    position: fixed;
+    width: 30%;
+    background-color: black;
 }
 
 
@@ -26,9 +59,17 @@ body, a {
     padding: 0;
 }
 
-.modal-content {
+#modal-content {
     background-color: transparent;
     border: none;
+}
+
+#modal-dialog, .modal-content {
+    height: 100%;
+}
+
+#mobileCollapsedNav {
+    width: 50%;
 }
 
 #modal-close-image {
@@ -73,6 +114,13 @@ body, a {
     border-radius: 25px;
     
 }
+
+#blocky li {
+    display: block;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
 
 h2 {
     border-bottom: 1px solid rgb(233, 233, 233);
@@ -152,15 +200,6 @@ div.collapse > ul > li {
     }
 }
 
-@media all and (max-width: 767px) {
-    #mobile-menu {
-        background-color: transparent;
-        height: 100vh;
-        z-index: 1;
-        width: 50%;
-        position: absolute;
-    }
-}
 
 
 
@@ -221,7 +260,7 @@ h1, #price {
 }
 
 #centering {
-    margin-top: 9%;
+    margin-top: 4.5%;
 }
 
 /* styling for product description section */

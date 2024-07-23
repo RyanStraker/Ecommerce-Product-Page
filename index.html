@@ -14,11 +14,11 @@
     <body>
 
 
-        <!-- First things first, the lightbox-->
+        <!-- First things first, the lightbox modal-->
 
         <div class="modal" id="Lightbox" data-backdrop="static">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content" id="modal-content">
                     <button type="button" class="close" data-dismiss="modal" aria-label="close" id="modal-close">
                         <img src="images/icon-close.svg" class="img-fluid" id="modal-close-image">
                     </button>                        
@@ -53,6 +53,27 @@
             </div>
         </div>
 
+        <!--now the mobile menu modal-->
+
+        <div class="modal" id="mobileCollapsedNav">
+            <div class="modal-dialog" id="modal-dialog" style="margin: 0">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img src="images/icon-close.svg" class="close" data-dismiss="modal" aria-label="close">
+                    </div>
+                    <div class="modal-body">
+                        <ul class="mb-0" id="blocky">
+                            <li><a href="#">Collections</a></li>
+                            <li><a href="#">Men</a></li>
+                            <li><a href="#">Women</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <div class="container-fluid">
 
@@ -60,19 +81,12 @@
 
             <div class="row justify-content-center mb-md-5">
                 <div class="col-12 col-md-9 px-m-0" id="visible-nav">
-                    <nav class="row navbar navbar-expand-md p-0 my-4" style="position: relative">
-                        <button type="button" class="navbar-toggler" data-target="#mobileCollapsedNav"> 
-                            <img src="images/icon-menu.svg" id="navbar-toggler">
+                    <nav class="row navbar navbar-expand-md p-0 my-4">
+                        <button type="button" class="navbar-toggler" data-toggle="modal" data-target="#mobileCollapsedNav">
+                            <img src="images/icon-menu.svg">
                         </button>  
                         <div class="col">     
                             <img src="images/logo.svg" id="logo-image">
-                        </div>
-                        <!-- mobile menu -->
-                        <div id="mobile-menu" style="display: none">
-                            <div>
-                                <img src="images/icon-close.svg">
-                                <h1>hello</h1>
-                            </div>
                         </div>
                         <div class="col collapse navbar-collapse navbar-nav text-left" id="mobileCollapsedNav">
                             <ul class="mb-0">
@@ -83,9 +97,11 @@
                                 <li><a href="#">Contact</a></li>
                             </ul>
                         </div>
-
                         <!-- For the basket, it will have to be done as a box w/position: fixed that is revealed by JavaScript on click event-->
                         <div class="col-1" class="nav-last-two" style="max-width: 100%">
+                            <div id="cart-amount" style="display: none">
+                                <span style="margin-left: 7px" id="cart-amount-number">1</span>
+                            </div>
                             <a href="#"><img src="images/icon-cart.svg" id="basket-icon-clickable"></a>
                         </div>
                         <div class="col-1" class="nav-last-two" style="max-width: 100%">
@@ -173,7 +189,7 @@
                                         <div class="col-7">
                                             <div class="row justify-content-between">
                                                 <div class="col-4" id="unique-grey-background">
-                                                    <p>50%</p>
+                                                    <p style="font-size: 1em">50%</p>
                                                 </div>
                                                 <div class="col-6 d-block d-md-none">
                                                     <p class="price-was">$250</p>
@@ -181,16 +197,16 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="d-none d-md-block" class="price-was">$250</p>
+                                    <p class="d-none d-md-block" class="price-was" style="text-decoration: line-through; font-weight: 700">$250</p>
                                     <div class="row mt-2">
                                         <div class="col-12">
                                             <div class="row justify-content-start">
-                                                <div class="col-12 col-md-3" id="quantity-toggler">
+                                                <div class="col-12 col-md-5" id="quantity-toggler">
                                                     <div id="inline-container" class="pt-1">
                                                         <div id="centering">
-                                                            <img src="images/icon-minus.svg" style="padding-right: 15px;" id="lessPlease">
+                                                            <img src="images/icon-minus.svg" style="padding-right: 15px;" id="lessPlease" class="img-fluid">
                                                             <span style="padding-right: 15px;" id="amount-buying">0</span>
-                                                            <img src="images/icon-plus.svg" id="morePlease">   
+                                                            <img src="images/icon-plus.svg" id="morePlease" class="img-fluid">   
                                                         </div>  
                                                     </div>    
                                                 </div>

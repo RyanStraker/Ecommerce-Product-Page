@@ -1,6 +1,24 @@
 window.addEventListener('DOMContentLoaded', function() {
-    
 
+    var addToCartButton = document.getElementById('add-to-cart-button');
+    var amountPurchasing = document.getElementById('quantity-buying');
+    var finalPrice = document.getElementById('final-price');
+    var mobileEmpty = document.getElementById('mobile-your-cart-is-empty');
+    var mobileFull = document.getElementById('mobile-stuff-in-cart');
+    
+    //code to show and hide cart amount depending on if there are any items in the cart//
+    
+    var cartAmount = document.getElementById('cart-amount');
+    var cartAmountNumber = document.getElementById('cart-amount-number');
+
+    addToCartButton.addEventListener('click', function() {
+        if (quantityBuying.innerHTML > 0) {
+            cartAmountNumber.innerHTML = quantityBuying.innerHTML;
+            cartAmount.setAttribute('style', 'display: block');
+        } else {
+            cartAmount.setAttribute('style', 'display: none');
+        }
+    });
     console.log("loaded pet");
 
      //code to get the quantity buying update every time + or - button is clicked//
@@ -22,7 +40,7 @@ window.addEventListener('DOMContentLoaded', function() {
             quantityBuying.innerHTML = theQuantity;
         } else {}
      });
-
+ 
     //Code to get basket menu to show on click of cart icon//
 
     var basketMenu = document.getElementById('basket-menu-container');
@@ -36,15 +54,9 @@ window.addEventListener('DOMContentLoaded', function() {
         }
         
     });
-    //code to reveal the mobile menu on click of button //
+     
+   
 
-    var mobileButton = document.getElementById('navbar-toggler');
-    var mobileMenu = document.getElementById('mobile-menu'); 
-
-    mobileButton.addEventListener('click', function () {
-        mobileMenu.setAttribute('style', 'display: block');
-    })
-    
     //Code to get opacity to change on click on images underneath main, and to introduce an orange solid border of 2px//
 
     var mainUnderneath = document.getElementsByClassName('non-lightbox-images-underneath');
@@ -93,6 +105,8 @@ window.addEventListener('DOMContentLoaded', function() {
         }
 
     });
+    
+   
 
     //Code to get lightbox image to change on clicks - WITHIN lightbox//
 
@@ -110,7 +124,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 lightboxImage.setAttribute('src', imageLocations[i]);
             }
         }
-    })
+    });
     
     //code to set lightbox load image as the one which the user has clicked//
 
@@ -120,22 +134,16 @@ window.addEventListener('DOMContentLoaded', function() {
                 lightboxImage.setAttribute('src', imageLocations[i]);
             }
         }
-    })
+    });
 
     //code to programatically update the calculations of final price in the mobile-display basket panel//
 
-    var addToCartButton = document.getElementById('add-to-cart-button');
-    var amountPurchasing = document.getElementById('quantity-buying');
-    var finalPrice = document.getElementById('final-price');
-    var mobileEmpty = document.getElementById('mobile-your-cart-is-empty');
-    var mobileFull = document.getElementById('mobile-stuff-in-cart');
+  
 
     addToCartButton.addEventListener('click', function() {
         amountPurchasing.innerHTML = quantityBuying.innerHTML;
         finalPrice.innerHTML = amountPurchasing.innerHTML * 125;
-
-
-    })
+    });
 
     addToCartButton.addEventListener('click', function() {
         if (amountPurchasing.innerHTML == 0) {
@@ -145,6 +153,10 @@ window.addEventListener('DOMContentLoaded', function() {
             mobileEmpty.setAttribute('style', 'display: none');
             mobileFull.setAttribute('style', 'display: block');
         }
-    })
-})
+    });
+
+    
+
+    
+});
 
